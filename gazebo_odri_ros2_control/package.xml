@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>gazebo_ros2_control</name>
+  <name>gazebo_odri_ros2_control</name>
   <version>0.0.2</version>
-  <description>gazebo_ros2_control</description>
+  <description>gazebo_odri_ros2_control</description>
 
   <maintainer email="ahcorde@osrfoundation.org">Alejandro Hernandez</maintainer>
 
@@ -35,6 +35,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-    <gazebo_ros2_control plugin="${prefix}/gazebo_hardware_plugins.xml"/>
+    <gazebo_ros2_control plugin="${prefix}/gazebo_odri_hardware_plugins.xml"/>
   </export>
 </package>
