@@ -39,8 +39,8 @@
 
 #include "gazebo_ros/node.hpp"
 
-#include "gazebo_ros2_control/gazebo_ros2_control_plugin.hpp"
-#include "gazebo_ros2_control/gazebo_system.hpp"
+#include "gazebo_odri_ros2_control/gazebo_odri_ros2_control_plugin.hpp"
+#include "gazebo_odri_ros2_control/gazebo_system.hpp"
 
 #include "pluginlib/class_loader.hpp"
 
