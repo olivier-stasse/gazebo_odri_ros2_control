@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5.0)
-project(gazebo_ros2_control)
+project(gazebo_odri_ros2_control)
 
 find_package(ament_cmake REQUIRED)
 find_package(angles REQUIRED)
@@ -27,7 +27,7 @@ link_directories(
 
 # Libraries
 add_library(${PROJECT_NAME} SHARED
-  src/gazebo_ros2_control_plugin.cpp
+  src/gazebo_odri_ros2_control_plugin.cpp
 )
 ament_target_dependencies(${PROJECT_NAME}
   angles
@@ -41,10 +41,10 @@ ament_target_dependencies(${PROJECT_NAME}
   yaml_cpp_vendor
 )
 
-add_library(gazebo_hardware_plugins SHARED
+add_library(gazebo_odri_hardware_plugins SHARED
   src/gazebo_system.cpp
 )
-ament_target_dependencies(gazebo_hardware_plugins
+ament_target_dependencies(gazebo_odri_hardware_plugins
   angles
   gazebo_dev
   hardware_interface
@@ -54,7 +54,7 @@ ament_target_dependencies(gazebo_hardware_plugins
 ## Install
 install(TARGETS
   ${PROJECT_NAME}
-  gazebo_hardware_plugins
+  gazebo_odri_hardware_plugins
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
@@ -68,7 +68,7 @@ ament_export_dependencies(ament_cmake)
 ament_export_dependencies(rclcpp)
 ament_export_libraries(
   ${PROJECT_NAME}
-  gazebo_hardware_plugins
+  gazebo_odri_hardware_plugins
 )
 
 if(BUILD_TESTING)
@@ -81,6 +81,6 @@ install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION include/${PROJECT_NAME}
 )
 
-pluginlib_export_plugin_description_file(gazebo_ros2_control gazebo_hardware_plugins.xml)
+pluginlib_export_plugin_description_file(gazebo_odri_ros2_control gazebo_odri_hardware_plugins.xml)
 
 ament_package()

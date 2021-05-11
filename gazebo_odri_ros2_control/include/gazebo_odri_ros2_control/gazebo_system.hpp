@@ -22,7 +22,7 @@
 
 #include "angles/angles.h"
 
-#include "gazebo_ros2_control/gazebo_system_interface.hpp"
+#include "gazebo_odri_ros2_control/gazebo_system_interface.hpp"
 
 #include "std_msgs/msg/bool.hpp"
 

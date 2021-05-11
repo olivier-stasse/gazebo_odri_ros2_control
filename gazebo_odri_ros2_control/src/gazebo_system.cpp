@@ -16,7 +16,7 @@
 #include <string>
 #include <vector>
 
-#include "gazebo_ros2_control/gazebo_system.hpp"
+#include "gazebo_odri_ros2_control/gazebo_system.hpp"
 
 class gazebo_ros2_control::GazeboSystemPrivate
 {
